@@ -29,44 +29,92 @@ ol {
 .cronometer {
   width: 100vw;
   height: 100vh;
-  max-width: 100%;
+  max-width: calc(100% - 40px);
   max-height: 100%;
+
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  row-gap: 40px;
+
+  margin: 0 auto;
 
   &__watcher {
     color: #d9d6d0;
-    @media screen and (orientation: portrait) and (max-width: 500px) {
-      font-size: 4rem;
-    }
     background-color: #0d0d0d;
-    padding: 10px;
+    border: 0 solid #BFBAB0;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+
+    order: 2;
+
+    margin: 0;
+
+    width: 100%;
+    min-width: 250px;
+
+    z-index: 1;
   }
   &__controllers {
-    @media screen and (orientation: portrait) and (max-width: 500px) {
-      width: 80%;
-    }
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.pointers {
+  column-gap: 15px;
+  row-gap: 25px;
+
+  flex-flow: row wrap-reverse;
+  justify-content: center;
+
+  padding: 30px;
+
+  font-size: 4rem;
+  &__pointer {
+    flex-basis: 40%;
+    flex-shrink: 67px;
+    flex-grow: 1;
+
+    padding: 0 10px;
+
+    background-color: #595958;
+  }
+
+  &__number {
+    text-align: center;
+    width: 100%;
   }
 }
 
 .controllers {
-  padding: 10px;
-  row-gap: 30px;
-  @media screen and (orientation: portrait) and (max-width: 500px) {
-    flex-flow: column nowrap;
-  }
+  justify-content: space-around;
+  column-gap: 5px;
 
   &__list {
+    flex-basis: 25%;
+    min-width: 70px;
   }
 
   &__button {
-    margin-inline: auto;
-    width: 70%;
+    width: 100%;
     height: 40px;
+
+    margin-inline: auto;
+
+    font-size: 1.5rem;
+
     background-color: #0d0d0d;
     color: #d9d6d0;
+    border-top: 5px solid #595958;
+
+    transition: 200ms;
+    &:active {
+      transform: translate(0, 15px);
+    }
+    &:disabled {
+      transform: translate(0, 15px);
+      border-top-color: red;
+    }
   }
 }

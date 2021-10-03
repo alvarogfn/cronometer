@@ -30,7 +30,7 @@ const Buttons = ({ timer, setTimer, seconds, setSeconds, appendSave }) => {
               changeTimerState();
             }}
           >
-            {!timer ? "Play" : "Pause"}
+            {!timer ? "▶" : "||"}
           </button>
         </li>
         <li className="controllers__list">
@@ -39,12 +39,12 @@ const Buttons = ({ timer, setTimer, seconds, setSeconds, appendSave }) => {
             onClick={() => resetTimer()}
             disabled={seconds < 1}
           >
-            Stop
+            ■
           </button>
         </li>
         <li className="controllers__list">
           <button className="controllers__button" onClick={() => appendSave()}>
-            Save
+            📥
           </button>
         </li>
       </ul>
