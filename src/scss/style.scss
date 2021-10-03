@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@800&family=Share+Tech+Mono&display=swap");
+body {
+  background-color: #d9d6d0;
+  font-family: "Share Tech Mono", monospace;
+  text-transform: uppercase;
+}
+
+button {
+  border: none;
+  font-family: "Oxanium", monospace;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+  display: flex;
+}
