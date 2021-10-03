@@ -3,6 +3,7 @@ import Watch from "./Watch.js";
 import Buttons from "./Buttons.js";
 import History from "./History.js";
 import Credits from "./Credits.js";
+import "./scss/style.scss";
 
 const App = () => {
   const [seconds, setSeconds] = React.useState(0);
@@ -33,16 +34,22 @@ const App = () => {
 
   return (
     <main>
-      <Watch seconds={seconds} />
-      <Buttons
-        timer={timer}
-        setTimer={setTimer}
-        seconds={seconds}
-        setSeconds={setSeconds}
-        appendSave={appendSave}
-      />
-      <History history={history} />
-      <Credits />
+      <section>
+        <Watch seconds={seconds} />
+        <Buttons
+          timer={timer}
+          setTimer={setTimer}
+          seconds={seconds}
+          setSeconds={setSeconds}
+          appendSave={appendSave}
+        />
+      </section>
+      <aside>
+        <History history={history} />
+      </aside>
+      <footer>
+        <Credits />
+      </footer>
     </main>
   );
 };

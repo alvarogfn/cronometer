@@ -1,7 +1,7 @@
 import React from "react";
 
 const Credits = () => {
-  return <footer>feito por kasoki</footer>;
+  return <div>feito por kasoki</div>;
 };
 
 export default Credits;

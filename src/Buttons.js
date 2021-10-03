@@ -23,7 +23,7 @@ const Buttons = ({ timer, setTimer, seconds, setSeconds, appendSave }) => {
   };
 
   return (
-    <>
+    <div>
       <ul>
         <li>
           <button
@@ -43,7 +43,7 @@ const Buttons = ({ timer, setTimer, seconds, setSeconds, appendSave }) => {
           <button onClick={() => appendSave()}>Save</button>
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 
