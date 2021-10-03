@@ -1,9 +1,7 @@
 import React from "react";
 
 const Buttons = ({ timer, setTimer, seconds, setSeconds, appendSave }) => {
- 
- 
- const changeTimerState = () => {
+  const changeTimerState = () => {
     if (!timer) {
       setTimer(
         setInterval(() => {
@@ -23,10 +21,11 @@ const Buttons = ({ timer, setTimer, seconds, setSeconds, appendSave }) => {
   };
 
   return (
-    <div>
-      <ul>
-        <li>
+    <div className="cronometer__controllers">
+      <ul className="controllers">
+        <li className="controllers__list">
           <button
+            className="controllers__button"
             onClick={() => {
               changeTimerState();
             }}
@@ -34,13 +33,19 @@ const Buttons = ({ timer, setTimer, seconds, setSeconds, appendSave }) => {
             {!timer ? "Play" : "Pause"}
           </button>
         </li>
-        <li>
-          <button onClick={() => resetTimer()} disabled={seconds < 1}>
+        <li className="controllers__list">
+          <button
+            className="controllers__button"
+            onClick={() => resetTimer()}
+            disabled={seconds < 1}
+          >
             Stop
           </button>
         </li>
-        <li>
-          <button onClick={() => appendSave()}>Save</button>
+        <li className="controllers__list">
+          <button className="controllers__button" onClick={() => appendSave()}>
+            Save
+          </button>
         </li>
       </ul>
     </div>

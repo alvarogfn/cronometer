@@ -34,7 +34,7 @@ const App = () => {
 
   return (
     <main>
-      <section>
+      <section className="cronometer">
         <Watch seconds={seconds} />
         <Buttons
           timer={timer}
