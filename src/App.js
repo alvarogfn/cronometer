@@ -25,11 +25,11 @@ const App = () => {
 
     let todayDate = today.toLocaleDateString("pt-BR");
     let todayTime = today.toLocaleTimeString("pt-BR");
-    localStorage.setItem("history", JSON.stringify(history));
     setHistory([
-      ...history,
       [dateForSave, { date: todayDate, time: todayTime }],
+      ...history,
     ]);
+    localStorage.setItem("history", JSON.stringify(history));
   };
 
   return (
@@ -45,7 +45,7 @@ const App = () => {
         />
       </section>
       <aside>
-        <History history={history} />
+        <History history={history} setHistory={setHistory} />
       </aside>
       <footer>
         <Credits />
