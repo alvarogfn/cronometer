@@ -29,7 +29,7 @@ ol {
 .cronometer {
   width: 100vw;
   height: 100vh;
-  max-width: calc(100% - 40px);
+  max-width: 300px;
   max-height: 100%;
 
   display: flex;
@@ -42,7 +42,7 @@ ol {
   &__watcher {
     color: #d9d6d0;
     background-color: #0d0d0d;
-    border: 0 solid #BFBAB0;
+    border: 0 solid #bfbab0;
     border-top-width: 5px;
     border-bottom-width: 5px;
 
@@ -62,28 +62,56 @@ ol {
 }
 
 .pointers {
-  column-gap: 15px;
-  row-gap: 25px;
-
+  column-gap: 5px;
+  row-gap: 30px;
+  
+  display: flex;
   flex-flow: row wrap-reverse;
   justify-content: center;
 
-  padding: 30px;
+  padding: 30px 0;
 
   font-size: 4rem;
+
+  &:nth-child(even) {
+    border: 1px solid red;
+  }
+  &:nth-child(odd) {
+    text-align: right;
+  }
+  
+
   &__pointer {
     flex-basis: 40%;
     flex-shrink: 67px;
-    flex-grow: 1;
 
     padding: 0 10px;
 
     background-color: #595958;
-  }
-
-  &__number {
-    text-align: center;
-    width: 100%;
+    position: relative;
+    &::before {
+      position: absolute;
+      font-size: 1rem;
+      top: -12px;
+      left: 105%;
+      transform: translate(-50%, -50%);
+      color: #595958;
+    }
+    &:nth-child(5)::before {
+      content: "seconds";
+    }
+    &:nth-child(3)::before {
+      content: "minutes";
+    }
+    &:nth-child(1)::before {
+      content: "hours";
+    }
+    &:nth-child(odd) {
+      text-align: right;
+    }
+    &:nth-child(even) {
+      text-align: left;
+    }
   }
 }
 

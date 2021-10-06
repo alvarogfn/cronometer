@@ -9,15 +9,15 @@ const Watch = ({ seconds }) => {
   });
   return (
     <section className="cronometer__watcher">
-      <ul className="pointers">
+      <div className="pointers">
         {pointers.map((item, index) => {
           return (
-            <li className="pointers__pointer" key={index}>
-              <div className="pointers__number">{item}</div>
-            </li>
+            <div className="pointers__pointer" key={index}>
+              {item}
+            </div>
           );
         })}
-      </ul>
+      </div>
     </section>
   );
 };
