@@ -55,14 +55,13 @@ ol {
 
     margin: 0;
 
+    z-index: 1;
+
     width: 100%;
     min-width: 250px;
-
-    z-index: 1;
   }
   &__controllers {
     width: 100%;
-    z-index: 1;
   }
 }
 
@@ -122,6 +121,7 @@ ol {
   justify-content: space-around;
   column-gap: 5px;
 
+
   &__list {
     flex-basis: 25%;
     min-width: 70px;
@@ -132,6 +132,7 @@ ol {
     height: 40px;
 
     margin-inline: auto;
+
 
     font-size: 1.5rem;
 
