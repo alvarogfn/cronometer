@@ -10,7 +10,6 @@
 body {
   background-color: #d9d6d0;
   font-family: "Share Tech Mono", monospace;
-  text-transform: uppercase;
 }
 
 button {
@@ -260,7 +259,7 @@ ol {
       grid-template-columns: 200px;
       padding: 0px 20px;
     }
-    grid-template-columns:  minmax(200px, 90%);
+    grid-template-columns: minmax(200px, 90%);
     justify-content: center;
 
     column-gap: 30px;
@@ -315,5 +314,36 @@ ol {
     font-weight: bold;
 
     text-align: center;
+  }
+}
+
+/// CREDITS
+
+.footer {
+  padding: 25px 0 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 10px;
+  text-transform: uppercase;
+
+  @media screen and (orientation: landscape) and (min-width: 800px) {
+    flex-flow: column nowrap;
+  }
+
+  &__item {
+    @media screen and (orientation: landscape) and (min-width: 800px) {
+      width: max-content;
+      margin: 0 10px;
+    }
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  &__link {
+    color: #0d0d0d;
+    text-decoration: none;
+    &:visited {
+      color: #595958;
+    }
   }
 }

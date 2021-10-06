@@ -33,24 +33,26 @@ const App = () => {
   };
 
   return (
-    <main>
-      <section className="cronometer">
-        <Watch seconds={seconds} />
-        <Buttons
-          timer={timer}
-          setTimer={setTimer}
-          seconds={seconds}
-          setSeconds={setSeconds}
-          appendSave={appendSave}
-        />
-      </section>
-      <aside>
-        <History history={history} setHistory={setHistory} />
-      </aside>
+    <>
+      <main>
+        <section className="cronometer">
+          <Watch seconds={seconds} />
+          <Buttons
+            timer={timer}
+            setTimer={setTimer}
+            seconds={seconds}
+            setSeconds={setSeconds}
+            appendSave={appendSave}
+          />
+        </section>
+        <section>
+          <History history={history} setHistory={setHistory} />
+        </section>
+      </main>
       <footer>
         <Credits />
       </footer>
-    </main>
+    </>
   );
 };
 
