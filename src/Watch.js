@@ -2,8 +2,8 @@ import React from "react";
 
 const Watch = ({ seconds }) => {
   const timer = new Date(0, 0, 0, 0, 0, seconds);
-  const watcher = [...timer.toLocaleTimeString("pt-BR")];
-  const pointers = watcher.filter((pointer) => {
+  const clock = [...timer.toLocaleTimeString("pt-BR")];
+  const pointers = clock.filter((pointer) => {
     if (pointer !== ":") return true;
     else return false;
   });
